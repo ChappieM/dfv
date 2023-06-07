@@ -1,0 +1,8 @@
+{
+  "name": "Node env",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "remoteUser": "node",
+  "shutdownAction": "none"
+}
