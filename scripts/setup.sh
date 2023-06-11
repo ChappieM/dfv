@@ -14,9 +14,3 @@ rm nvim.appimage
 mv squashfs-root /nvim-app
 ln -s /nvim-app/AppRun /usr/bin/nvim
 
-# clone my nvim config
-nvim_dir=$HOME/.config/nvim
-if [ -d $nvim_dir ]; then
-	mv $nvim_dir ~/.config/nvim_old
-fi
-git clone https://github.com/ChappieM/nvim.git $nvim_dir
