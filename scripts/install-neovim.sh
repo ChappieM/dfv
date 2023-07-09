@@ -1,7 +1,7 @@
 #! /bin/bash
 
 WORK_DIR='/var/tmp'
-NVIM_APP_DIR='/nvim-app'
+NVIM_APP_DIR='~/my-apps/nvim'
 
 cd ${WORK_DIR}
 
@@ -11,6 +11,7 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 rm nvim.appimage
-mv squashfs-root /nvim-app
-ln -s /nvim-app/AppRun /usr/bin/nvim
 
+mkdir -p ${NVIM_APP_DIR}
+mv squashfs-root ${NVIM_APP_DIR}
+ln -s ${NVIM_APP_DIR}/AppRun /usr/bin/nvim
